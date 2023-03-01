@@ -133,6 +133,134 @@ $ npm start
 
 <br />
 
+## ✏️ 인상깊은 코드
+### 2-1. 탭 별 조건부 렌더링
+
+![](https://velog.velcdn.com/images/sujeong_dev/post/30261ee7-6244-4b83-8ccb-2ab67f538670/image.gif)
+
+리스트페이지에서 조건부 렌더링을 통해 탭 레이아웃 구현
+
+**👇 ProductList.js**
+```jsx
+const TABS = [
+    {
+      id: 0,
+      title: '브랜드',
+      content: <Brand />,
+    },
+    {
+      id: 1,
+      title: '가격',
+      content: <Price />,
+    },
+    {
+      id: 2,
+      title: '사이즈',
+      content: <Size />,
+    },
+  ];
+
+            <div className="left-filter">
+              <ul className="filter-list">
+                {TABS.map(filter => {
+                  const isCurrent = currentTab === filter.id;
+                  return (
+                    <li key={filter.id}>
+                      <button
+                        onClick={() =>
+                          setCurrentTab(isCurrent ? '' : filter.id)
+                        }
+                        className={isCurrent ? 'current' : ''}
+                      >
+                        {filter.title}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          {TABS.find(({ id }) => id === currentTab)?.content}
+
+```
+> - `TAB`객체를 활용하여 id, content를 매칭하여 조건부 렌더링 구현
+- `map`을 돌려 `title`을 불러와 필터링 버튼을 생성하고 click시 현재 tab의 id값을 설정한다.
+- 현재 tab의 id를 `TAB`객체에서 찾아 해당하는 id의 content인 컴포넌트를 불러온다.
+- `옵셔널체이닝`을 통해 `TAB`객체에서 현재 tab의 id가 없는 경우, 즉 tab이 다 닫혀있는 경우 content를 불러올 수 없기 때문에 예외처리를 해주었다.
+** 현재 열려있는 tab을 한번 더 click시 현재 tab의 id와 `TAB`객체의 id가 같은 지 판별하여 현재 tab의 id를 reset하여 toggle기능 구현
+
+### 2-2. querystring
+브랜드, 가격, 사이즈의 정보를 querystring으로 담아 필터링 구현
+
+**👇 Brand.js**
+```jsx
+const [searchParams, setSearchParams] = useSearchParams();
+
+  //TODO: 브랜드 검색기능
+  const searchBrand = e => {
+    const filterBrand = BRAND.filter(brand =>
+      brand.name.includes(e.target.value)
+    );
+    setFilterList(filterBrand);
+  };
+
+  //TODO: querystring 생성
+  const prevQuery = searchParams.getAll('brandId');
+  const handleCheckbox = e => {
+    const { checked, value } = e.target;
+    if (checked) {
+      searchParams.append('brandId', value);
+      setSearchParams(searchParams);
+    } else {
+      searchParams.delete('brandId');
+      prevQuery
+        .filter(query => query !== value)
+        .forEach(query => searchParams.append('brandId', query));
+      setSearchParams(searchParams);
+    }
+  };
+```
+> - checkbox에 check가 되었으면 searchparams에 append()를 통해 추가한다.
+- check가 해제되었으면 해당 param key의 value들을 모두 삭제하고 이전에 모든 value들을 담아놓은 `prevQuery`변수에서 e.target.value인 것들을 제외한 value들을 다시 searchparams에 담는다.
+
+
+### 2-3. path parameter를 통한 동적라우팅
+![](https://velog.velcdn.com/images/sujeong_dev/post/666a5342-2b4b-4058-a104-f79b03164847/image.gif)
+
+**👇 Product.js**
+```jsx
+    <li>
+      <Link to={`/product-detail/${id}`}>
+        <img src={imgurl} alt="상품이미지" />
+        <div className="like" />
+        <div className="info">
+          <span className="brand">{brand}</span>
+          <span className="name">{name}</span>
+          <span className="price">{Number(price).toLocaleString()}</span>
+          <span className="heart">
+            <i className="fa-regular fa-heart" />
+            <em>999+</em>
+          </span>
+        </div>
+      </Link>
+    </li>
+```
+**👇 Router.js**
+```jsx
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/product-detail/:productId" element={<ProductDetail />} />
+        <Route path="/product-list" element={<ProductList />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+```
+> - `Router.js`의 path prop에 `:productId`로 이름을 지정한다.
+- 상품리스트페이지에서 어떠한 품목을 선택해도 상품 상세페이지로 이동하게된다.
+
+<br />
+
 ## 💡 협업 방법
 
 - Notion과 Trello를 사용하여 scrum, sprint 진행
