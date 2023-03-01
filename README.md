@@ -22,6 +22,8 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 
 ## 🚀 실행방법
 ```zsh
+$ git clone https://github.com/sujeong-dev/39-1st-WCF-frontend.git
+$ git pull origin main
 $ npm install
 $ npm start
 ```
