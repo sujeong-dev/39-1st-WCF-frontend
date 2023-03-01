@@ -2,12 +2,13 @@
 
 <br />
 <img width:"100%" src="https://user-images.githubusercontent.com/98579539/204131960-1f61d815-1da8-407e-b5f8-76ad620f81e2.gif" />
+
 <br />
 
 ## 👏 소개
 
 SSF SHOP을 모티브로한 의류 소개 사이트
-<br />
+
 <br />
 
 ## 💡 서비스
@@ -16,14 +17,20 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 👕 위코드 멘토님들 및 동기분들의 의류소개<br />
 ✏️ 카테고리 별 브랜드 검색 및 필터링<br />
 🛒 장바구니
+
 <br />
+
+## 🚀 실행방법
+```zsh
+$ npm install
+$ npm start
+```
 <br />
 
 ## 🔧 사용하는 기술스택
 
 ![](https://velog.velcdn.com/images/sujeong_dev/post/d46cd72c-b2e6-421b-822d-5dd1bb88b45c/image.png)
 
-<br />
 <br />
 
 ## ⭐️ 프로젝트 구조
@@ -123,7 +130,6 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 ```
 
 <br />
-<br />
 
 ## 💡 협업 방법
 
@@ -133,7 +139,6 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 ### 협업 tools 및 개발규칙는 [위키](https://github.com/wecode-bootcamp-korea/39-1st-WCF-frontend/wiki) 참조
 
 <br />
-<Br />
 
 ## ❤️ 팀원
 
