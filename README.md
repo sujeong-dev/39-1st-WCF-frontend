@@ -3,13 +3,10 @@
 <br />
 <img width:"100%" src="https://user-images.githubusercontent.com/98579539/204131960-1f61d815-1da8-407e-b5f8-76ad620f81e2.gif" />
 <br />
-<br />
-<br />
 
 ## 👏 소개
 
 SSF SHOP을 모티브로한 의류 소개 사이트
-<br />
 <br />
 <br />
 
@@ -21,13 +18,11 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 🛒 장바구니
 <br />
 <br />
-<br />
 
 ## 🔧 사용하는 기술스택
 
 ![](https://velog.velcdn.com/images/sujeong_dev/post/d46cd72c-b2e6-421b-822d-5dd1bb88b45c/image.png)
 
-<br />
 <br />
 <br />
 
@@ -129,7 +124,6 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 
 <br />
 <br />
-<br />
 
 ## 💡 협업 방법
 
@@ -140,7 +134,6 @@ SSF SHOP을 모티브로한 의류 소개 사이트
 
 <br />
 <Br />
-<br />
 
 ## ❤️ 팀원
 
