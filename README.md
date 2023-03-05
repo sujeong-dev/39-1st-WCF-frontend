@@ -184,9 +184,9 @@ const TABS = [
 
 ```
 > - `TAB`객체를 활용하여 id, content를 매칭하여 조건부 렌더링 구현
-- `map`을 돌려 `title`을 불러와 필터링 버튼을 생성하고 click시 현재 tab의 id값을 설정한다.
-- 현재 tab의 id를 `TAB`객체에서 찾아 해당하는 id의 content인 컴포넌트를 불러온다.
-- `옵셔널체이닝`을 통해 `TAB`객체에서 현재 tab의 id가 없는 경우, 즉 tab이 다 닫혀있는 경우 content를 불러올 수 없기 때문에 예외처리를 해주었다.
+> - `map`을 돌려 `title`을 불러와 필터링 버튼을 생성하고 click시 현재 tab의 id값을 설정한다.
+> - 현재 tab의 id를 `TAB`객체에서 찾아 해당하는 id의 content인 컴포넌트를 불러온다.
+> - `옵셔널체이닝`을 통해 `TAB`객체에서 현재 tab의 id가 없는 경우, 즉 tab이 다 닫혀있는 경우 content를 불러올 수 없기 때문에 예외처리를 해주었다. <br />
 ** 현재 열려있는 tab을 한번 더 click시 현재 tab의 id와 `TAB`객체의 id가 같은 지 판별하여 현재 tab의 id를 reset하여 toggle기능 구현
 
 ### 2. querystring
@@ -221,7 +221,7 @@ const [searchParams, setSearchParams] = useSearchParams();
   };
 ```
 > - checkbox에 check가 되었으면 searchparams에 append()를 통해 추가한다.
-- check가 해제되었으면 해당 param key의 value들을 모두 삭제하고 이전에 모든 value들을 담아놓은 `prevQuery`변수에서 e.target.value인 것들을 제외한 value들을 다시 searchparams에 담는다.
+> - check가 해제되었으면 해당 param key의 value들을 모두 삭제하고 이전에 모든 value들을 담아놓은 `prevQuery`변수에서 e.target.value인 것들을 제외한 value들을 다시 searchparams에 담는다.
 
 
 ### 3. path parameter를 통한 동적라우팅
@@ -260,7 +260,7 @@ const [searchParams, setSearchParams] = useSearchParams();
     </BrowserRouter>
 ```
 > - `Router.js`의 path prop에 `:productId`로 이름을 지정한다.
-- 상품리스트페이지에서 어떠한 품목을 선택해도 상품 상세페이지로 이동하게된다.
+> - 상품리스트페이지에서 어떠한 품목을 선택해도 상품 상세페이지로 이동하게된다.
 
 <br />
 
