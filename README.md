@@ -134,7 +134,7 @@ $ npm start
 <br />
 
 ## ✏️ 인상깊은 코드
-### 2-1. 탭 별 조건부 렌더링
+### 1. 탭 별 조건부 렌더링
 
 ![](https://velog.velcdn.com/images/sujeong_dev/post/30261ee7-6244-4b83-8ccb-2ab67f538670/image.gif)
 
@@ -189,7 +189,7 @@ const TABS = [
 - `옵셔널체이닝`을 통해 `TAB`객체에서 현재 tab의 id가 없는 경우, 즉 tab이 다 닫혀있는 경우 content를 불러올 수 없기 때문에 예외처리를 해주었다.
 ** 현재 열려있는 tab을 한번 더 click시 현재 tab의 id와 `TAB`객체의 id가 같은 지 판별하여 현재 tab의 id를 reset하여 toggle기능 구현
 
-### 2-2. querystring
+### 2. querystring
 브랜드, 가격, 사이즈  querystring으로 담아 필터링 구현
 
 **👇 Brand.js**
@@ -224,7 +224,7 @@ const [searchParams, setSearchParams] = useSearchParams();
 - check가 해제되었으면 해당 param key의 value들을 모두 삭제하고 이전에 모든 value들을 담아놓은 `prevQuery`변수에서 e.target.value인 것들을 제외한 value들을 다시 searchparams에 담는다.
 
 
-### 2-3. path parameter를 통한 동적라우팅
+### 3. path parameter를 통한 동적라우팅
 ![](https://velog.velcdn.com/images/sujeong_dev/post/666a5342-2b4b-4058-a104-f79b03164847/image.gif)
 
 리스트페이지에서 의류를 선택 시 상세페이지로 넘어가야하는데 그럼 그 많은 상세페이지를 다 만들어야하나 고민하다가 동적라우팅으로 해결하였습니다.
