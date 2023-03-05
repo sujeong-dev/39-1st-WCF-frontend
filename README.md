@@ -226,6 +226,7 @@ const [searchParams, setSearchParams] = useSearchParams();
 
 ### 2-3. path parameter를 통한 동적라우팅
 ![](https://velog.velcdn.com/images/sujeong_dev/post/666a5342-2b4b-4058-a104-f79b03164847/image.gif)
+
 리스트페이지에서 의류를 선택 시 상세페이지로 넘어가야하는데 그럼 그 많은 상세페이지를 다 만들어야하나 고민하다가 동적라우팅으로 해결하였습니다.
 
 **👇 Product.js**
