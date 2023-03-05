@@ -138,7 +138,8 @@ $ npm start
 
 ![](https://velog.velcdn.com/images/sujeong_dev/post/30261ee7-6244-4b83-8ccb-2ab67f538670/image.gif)
 
-리스트페이지에서 조건부 렌더링을 통해 탭 레이아웃 구현
+`어떻게하면 같은 자리에 선택한 탭(브랜드, 가격, 사이즈)별로 다른 내용을 보여주게끔 할 수 있을까?`고민하다가 처음에는 state에 선택한 탭의 Id값을 저장해서 조건부연산자로 구현하였다.
+그렇지만 조건이 3개나 있어 조건을 주기가 애매했고 가독성이 떨어지는 문제점이 발생했고 알아본 결과 `객체를 사용한 조건부 렌더링`으로 해결하였다.
 
 **👇 ProductList.js**
 ```jsx
@@ -189,7 +190,7 @@ const TABS = [
 ** 현재 열려있는 tab을 한번 더 click시 현재 tab의 id와 `TAB`객체의 id가 같은 지 판별하여 현재 tab의 id를 reset하여 toggle기능 구현
 
 ### 2-2. querystring
-브랜드, 가격, 사이즈의 정보를 querystring으로 담아 필터링 구현
+브랜드, 가격, 사이즈  querystring으로 담아 필터링 구현
 
 **👇 Brand.js**
 ```jsx
@@ -225,6 +226,7 @@ const [searchParams, setSearchParams] = useSearchParams();
 
 ### 2-3. path parameter를 통한 동적라우팅
 ![](https://velog.velcdn.com/images/sujeong_dev/post/666a5342-2b4b-4058-a104-f79b03164847/image.gif)
+리스트페이지에서 의류를 선택 시 상세페이지로 넘어가야하는데 그럼 그 많은 상세페이지를 다 만들어야하나 고민하다가 동적라우팅으로 해결하였습니다.
 
 **👇 Product.js**
 ```jsx
