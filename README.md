@@ -263,10 +263,44 @@ const [searchParams, setSearchParams] = useSearchParams();
 
 ## 💡 협업 방법
 
+[Daily Scrum](https://www.notion.so/2bbf8f95a67145ef95bb894218a36bd9?v=55e35e5990e74976b632bdb6abb6c302) <br />
+[Weekly Sprint](https://trello.com/b/1gVZ7fLi/wcf-project) <br />
+[GitBook](https://app.gitbook.com/invite/TrPu4aaNiM1bknArdCkO/UgdypoLMCugFRoQwknBZ) <br />
+[Postman](https://documenter.getpostman.com/view/18295633/2s8YYJr3Rd#6297ab26-b93c-46ff-bce0-d9e681c181f3) <br />
 - Notion과 Trello를 사용하여 scrum, sprint 진행
-- GitBook과 Postman을 활용하여 API 및 mockdata형식 공유 <br />
+- GitBook과 Postman을 활용하여 API 및 mockdata형식 공유
 
-### 협업 tools 및 개발규칙는 [위키](https://github.com/wecode-bootcamp-korea/39-1st-WCF-frontend/wiki) 참조
+<br />
+
+## ✨ 컨벤션
+
+### 🏷 Naming
+
+### 1. 파일명
+
+- 컴포넌트의 파일명은 기본적으로 Pascal case를 사용한다. (ex. H3.js, Button.js)
+- 여러 컴포넌트에서 import 하여 사용되는(utils) 파일명은 Camel case를 사용한다. (ex. useInputs.js)
+
+### 2. 변수명
+
+- 변수명은 기본적으로 Camel case를 사용한다. (ex. className)
+- 가능한 명사를 사용한다.
+- 배열과 같이 여러개의 원소를 담는 경우 복수형 명사를 사용한다.
+
+### 3. 컴포넌트&함수명
+
+- 컴포넌트명은 기본적으로 파일명과 동일하게한다.
+- 컴포넌트 외에 함수는 변수명과 동일하게 Camel case를 사용한다.
+
+### 4. SCSS 클래스명
+
+- 제일 바깥에 있는 부모 태그는 “컴포넌트명 container” 로 지정한다.
+- className은 kebab-case로 작성한다.(ex. login-container)
+
+### 5. 이미지 파일명
+
+- 공용으로 사용하는(ex. 로고 이미지)이미지들은 ‘public/images’에 kebab-case로 작성한다.(ex. logo-image)
+- 각자 컴포넌트에서 사용하는(ex. 메인페이지-사진들, 상품상세페이지-사진들)이미지들은 ‘src/images’에 컴포넌트명으로 폴더생성 후 kebab-case로 작성한다.(ex. main-image)
 
 <br />
 
