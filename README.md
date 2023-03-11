@@ -29,6 +29,11 @@ $ npm start
 ```
 <br />
 
+## 🎥 데모영상
+https://vimeo.com/782390476
+
+<br />
+
 ## 🔧 사용하는 기술스택
 
 ![](https://velog.velcdn.com/images/sujeong_dev/post/d46cd72c-b2e6-421b-822d-5dd1bb88b45c/image.png)
